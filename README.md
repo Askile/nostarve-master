@@ -1,18 +1,18 @@
-Quick guilde to run master server in localhost:
+Quick guile to run server in localhost:
 1. Install node.js 18 version.
-2. Install https://github.com/Askile/nostarve-master repository
+2. Install https://github.com/Askile/nostarve-server repository
 3. Open project in Visual studio code or Webstorm.
 4. Open terminal. Binds: Visual studio - CTRL + `; Webstorm - CTRL + F12
 5. Write ```npm install``` in console
-6. Write ```node app.js```
+6. Write ```node compiled/server.js```
 
-Quick guide to run server:
+Quick guide to run master server:
 1. Install node.js 18 version.
 2. Install this repository
 3. Open project in Visual studio code or Webstorm.
 4. Open terminal. Binds: Visual studio - CTRL + `; Webstorm - CTRL + F12
 5. Write ```npm install``` in console
-6. Write ```node compiled/server.js```
+6. Write ```node app.js```
 
 Quick guide to run in production mode:
 1. Install Filezilla and Termius.
