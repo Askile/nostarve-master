@@ -1,0 +1,755 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+}
+
+body.trees{
+    background: #133A2B url("../img/trees.png") center 0% repeat-x;
+    background-attachment: scroll;
+    font-family: "Baloo Paaji";
+    color: #ffffff;
+
+}
+
+hr.new{
+    background: #52390a;
+    box-shadow: -4px 5px 0px #211503;
+    border: none;
+    border-radius: 8px;
+    height: 20px;
+    margin-top: 40px;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    background-color: #d2a323;
+}
+a:hover{
+    color:white;
+    text-decoration: none;
+    background-color: #d4570e;
+}
+a:focus{
+    color:white;
+    text-decoration: none;
+    background-color: #755805;
+}
+#commandsBg {
+    /*background-color: #133A2B;*/
+    background-color: #0b442d;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+#mainBox::-webkit-scrollbar { width: 0 !important }
+#mainBox {
+    margin: 50px;
+    margin-top: 250px;
+    border-radius: 16px;
+    background-color: rgba(0,0,0,0.5);
+    font-family: 'Baloo Paaji', sans-serif;
+    color: #efe4b4;
+    font-size: 16px;
+}
+#boxTitle{
+    text-align: center;
+    font-size:30px;
+    padding-bottom:20px;
+}
+.buttonsCategory{
+    position:fixed;
+    width:100%;
+    background-color: #473021 ;
+    font-size: 14px;
+    box-shadow: 0 4px 0 #000000;
+    text-transform: uppercase;
+    padding-left:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.buttonGeneration {
+    background-color: #19bb67;
+    border-radius: 0px 15px 0px 15px;
+    padding:4px 6px;
+    display: inline-block;
+
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:5px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+#buttonCopyCode {
+    background-color: #19bb67;
+    border-radius: 0px 15px 0px 15px;
+    padding:4px 6px;
+    display: inline-block;
+
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:5px;
+    font-size:15px;
+}
+.steps{
+    float:right;
+    background-color: rgba(0,0,0,0.4);
+    padding-bottom:5px;
+    margin-bottom:-5px;
+    margin-right:10px;
+    padding-left:15px;
+    border-radius:15px 0px 0px 0px;
+}
+.buttonTable {
+    background-color: #ad8109;
+    border-radius: 0px 15px 0px 15px;
+    padding:4px 6px;
+    display: inline-block;
+    margin: 2px 2px;
+    cursor:pointer;
+}
+.buttonTable :hover{
+    background-color: #d2a323;
+    border-radius: 0px 15px 0px 15px;
+    padding:4px 6px;
+}
+
+.commandTitleInfo{
+    background-color: #ad8109;
+    font-size: 20px;
+    padding: 3px 15px 0px 15px;
+    margin: 5% 5% 5% 5%;
+    box-shadow: 0 4px 0 #000000;
+    text-transform: uppercase;
+}
+.commandSubtitleInfo{
+    background-color: rgba(173, 129, 9, 0.5);
+    font-size: 20px;
+    padding: 3px 15px 0px 15px;
+    margin: 4% 20% 4% 20%;
+    box-shadow: 0 4px 0 #000000;
+    text-transform: uppercase;
+}
+.commandSubSubtitleInfo{
+    background-color: rgba(173, 129, 9, 0.1);
+    font-size: 20px;
+    padding: 3px 15px 0px 15px;
+    margin: 4% 20% 4% 20%;
+    box-shadow: 0 4px 0 #000000;
+    text-transform: uppercase;
+}
+.commandInfo{
+    background-color: #473021;
+    font-size: 15px;
+    padding: 3px 15px 0px 15px;
+    margin: 2% 5% 0% 5%;
+    box-shadow: 0 4px 0 #000000;
+}
+.commandBoxTable{
+    font-size:20px;
+    margin: 0% 5%;
+}
+.spaceTable{
+    margin: 5px;
+}
+.commandNameTable{
+    background-color: #684723;
+    border-radius: 16px 0px 16px 0px;
+    font-size: 23px;
+    width: 350px;
+    height:35px;
+    padding-left: 25px;
+    box-shadow: 0 4px 0 #000000;
+    border-radius: 0px 0px 0px 20px;
+
+}
+.tableInput{
+    font-size: 29px;
+    color: #ce9f1b;
+    width: 150px;
+    padding: 3px;
+    text-indent: 10px;
+    text-align: center;
+    font-family: "Baloo Paaji", sans-serif;
+    background-color: #ffffff26;
+    border: none;
+}
+.generateInputClass{
+    font-size: 19px;
+    color: #ce9f1b;
+    width: 800px;
+    height:50px;
+    padding: 3px;
+    text-indent: 10px;
+    text-align: center;
+    font-family: "Baloo Paaji", sans-serif;
+    background-color: #ffffff26;
+    border: none;
+}
+
+.tableInputText{
+    font-size: 15px;
+    color: #ce9f1b;
+    width: 300px;
+    padding: 7px;
+    text-align: center;
+    font-family: "Baloo Paaji", sans-serif;
+    background-color: #ffffff26;
+    border: none;
+}
+.tableInput::placeholder{
+    color: #ce9f1b;
+
+}
+.yellow{
+    color: #ce9f1b;
+}
+.commandType{
+    background-color: rgba(0,0,0,0.5);
+    color: #ce9f1b;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+img {
+    width:44px;
+}
+img:hover {
+    -webkit-filter: brightness(200%); /* Safari 6.0 - 9.0 */
+    filter: brightness(200%);
+}
+img:active {
+    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
+}
+
+div#mapeditor {
+
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+canvas#map {
+
+    display: block;
+    cursor: url("../img/cursor0.png"), auto;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -o-crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    margin: 0 auto;
+    border: 10px;
+    border-color: #84471e;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.mapButtonsEditing {
+    position:fixed;
+    margin-top:67px;
+    display:inline-block;
+    background: rgba(0,0,0,0.5);
+    padding:10px;
+    padding-top:0px;
+    border-radius:15px;
+}
+
+.right {
+    margin-left:80%;
+    margin-right:2%;
+    height: 510px;
+    overflow-y: scroll;
+
+}
+
+.left {
+    margin-left:2%;
+    margin-right:80%;
+    width:180px;
+}
+.backgroundUnitBox {
+    background-color: #532611;
+    width: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    display:inline-block;
+}
+.forestBiome {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/forest-editor-out.png");
+    background-size: 30px 30px;
+    width: 30px;
+    height:30px;
+}
+
+.forestBiome:hover {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/forest-editor-in.png");
+    background-size: 30px 30px;
+}
+
+.forestBiome:active {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/forest-editor-click.png");
+    background-size: 30px 30px;
+}
+
+.winterBiome {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/winter-editor-out.png");
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.winterBiome:hover {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/winter-editor-in.png");
+    background-size: 30px 30px;
+}
+
+.winterBiome:active {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/winter-editor-click.png");
+    background-size: 30px 30px;
+}
+
+.lavaBiome {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/lava-editor-out.png");
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.lavaBiome:hover {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/lava-editor-click.png");
+    background-size: 30px 30px;
+}
+
+.lavaBiome:active {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/lava-editor-in.png");
+    background-size: 30px 30px;
+}
+
+.caveBiome {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/cave-editor-out.png");
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.caveBiome:hover {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/cave-editor-in.png");
+    background-size: 30px 30px;
+}
+
+.caveBiome:active {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/cave-editor-click.png");
+    background-size: 30px 30px;
+}
+
+.desertBiome {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/desert-editor-out.png");
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.desertBiome:hover {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/desert-editor-in.png");
+    background-size: 30px 30px;
+}
+
+.desertBiome:active {
+    cursor: url(../img/cursor1.png), pointer;
+    background: url("../img/desert-editor-click.png");
+    background-size: 30px 30px;
+}
+
+.buttonImg {
+    display:inline-block;
+    margin-right:-5px;
+}
+.buttonImg:hover {
+    -webkit-filter: brightness(120%); /* Safari 6.0 - 9.0 */
+    filter: brightness(120%);
+}
+.buttonImg:active {
+    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
+}
+.medium {
+    width: 36px;
+    height: 40px;
+}
+.small {
+    width: 28px;
+    height: 32px;
+}
+
+#gold1 {
+    height:47px;
+    width: 36px;
+}
+#gold2 {
+    height:40px;
+    width: 30px;
+}
+#arrowEditorLeft{
+    position:absolute;
+    background: url(../img/arrow-map-left-out.png);
+    width: 59px;
+    height: 131px;
+    margin: 0 auto;
+}
+#arrowEditorLeft:hover{
+    position:absolute;
+    background: url(../img/arrow-map-left-in.png);
+    width: 59px;
+    height: 131px;
+    margin: 0 auto;
+}
+#arrowEditorLeft:active{
+    position:absolute;
+    background: url(../img/arrow-map-left-click.png);
+    width: 59px;
+    height: 131px;
+    margin: 0 auto;
+}
+#arrowEditorRight{
+    position:absolute;
+    background: url(../img/arrow-map-right-out.png);
+    width: 59px;
+    height: 131px;
+    margin: 0 auto;
+}
+#arrowEditorRight:hover{
+    position:absolute;
+    background: url(../img/arrow-map-right-in.png);
+    width: 59px;
+    height: 131px;
+    margin: 0 auto;
+}
+#arrowEditorRight:active{
+    position:absolute;
+    background: url(../img/arrow-map-right-click.png);
+    width: 59px;
+    height: 131px;
+    margin: 0 auto;
+}
+#arrowEditorTop{
+    position:absolute;
+    background: url(../img/arrow-map-top-out.png);
+    width: 120px;
+    height: 59px;
+    margin: 0 auto;
+}
+#arrowEditorTop:hover{
+    position:absolute;
+    background: url(../img/arrow-map-top-in.png);
+    width: 120px;
+    height: 59px;
+    margin: 0 auto;
+}
+#arrowEditorTop:active{
+    position:absolute;
+    background: url(../img/arrow-map-top-click.png);
+    width: 120px;
+    height: 59px;
+    margin: 0 auto;
+}
+#arrowEditorBottom{
+    position:absolute;
+    background: url(../img/arrow-map-bottom-out.png);
+    width: 120px;
+    height: 69px;
+    margin: 0 auto;
+}
+#arrowEditorBottom:hover{
+    position:absolute;
+    background: url(../img/arrow-map-bottom-in.png);
+    width: 120px;
+    height: 69px;
+    margin: 0 auto;
+}
+#arrowEditorBottom:active{
+    position:absolute;
+    background: url(../img/-click.png);
+    width: 120px;
+    height: 69px;
+    margin: 0 auto;
+}
+#zoomBox{
+    position:absolute;
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+}
+#zoomOut{
+    background: url(../img/zoom-map-out.png);
+    width: 95px;
+    height: 100px;
+    display:inline-block;
+}
+#zoomOut:hover{
+    background: url(../img/zoom-map-in.png);
+    width: 95px;
+    height: 100px;
+}
+#zoomOut:active{
+    background: url(../img/zoom-map-click.png);
+    width: 95px;
+    height: 100px;
+}
+#zoomIn{
+    background: url(../img/zoom-out-map-click.png);
+    width: 95px;
+    height: 100px;
+    display:inline-block;
+}
+#zoomIn:hover{
+    background: url(../img/zoom-out-map-in.png);
+    width: 95px;
+    height: 100px;
+}
+#zoomIn:active{
+    background: url(../img/zoom-out-map-out.png);
+    width: 95px;
+    height: 100px;
+}
+#rubberBox {
+    position: absolute;
+    margin: 0 auto;
+    width:600px;
+    height: 150px;
+}
+#finished{
+    background: url(../img/finished-out.png);
+    display:inline-block;
+    width: 128px;;
+    height: 54px;
+
+}
+#finished:hover{
+    background: url(../img/finished-in.png);
+    width: 128px;
+    height: 54px;
+}
+#finished:active{
+    background: url(../img/finished-click.png);
+    width: 128px;
+    height: 54px;
+}
+#rubber{
+    background: url(../img/rubber-out.png);
+    display:inline-block;
+    width: 95px;
+    height: 100px;
+
+}
+#rubber:hover{
+    background: url(../img/rubber-in.png);
+    width: 95px;
+    height: 100px;
+}
+#rubber:active{
+    background: url(../img/rubber-click.png);
+    width: 95px;
+    height: 100px;
+}
+
+#loadConfiguration {
+    background: #776036;
+}
+
+#openMapEditor {
+    cursor:pointer;
+}
+
+#magma2 {
+    width:36px;
+    height: 31px;
+}
+.topBeach {
+    margin-left:60px;
+    margin-top: -29px;
+    width: 30px;
+}
+.leftBeach {
+    margin-bottom: -60px;
+    margin-left: 2px;
+    margin-right: 3px;
+    margin-top: 23px;
+    width: 30px;
+
+}
+.beachBG {
+    background-color: #532611;
+    padding: 25px 5px;
+    border-radius: 10px;
+    display:inline-block;
+
+}
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 200px;
+}
+.mapTitle {
+    background: #633315;
+    border-radius:  15px 0px 15px 0px;
+    margin-right:30px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-top:15px;
+    width:160px;
+    box-shadow: 0px 6px black;
+}
+.backgroundBox {
+    background-color: #85471e;
+    padding-left:6px;
+    padding-right:6px;
+    padding-top:15px;
+    margin-top:6px;
+    border-radius: 0px 15px 0px 15px;
+    width:157px;
+    box-shadow: 0px 6px #633315;
+}
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #c48d05;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -15%;
+    left: 140%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.size {
+    width:350px;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 21%;
+    left: -4%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  transparent #c48d05 transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.tipright {
+    position: relative;
+    margin-top: -80px;
+    margin-left: 200px;
+}
+
+.tipright .tiprighttext {
+    visibility: hidden;
+    background-color: #c48d05;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    left: 140%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display:inline-block;
+}
+
+.tipright .tiprighttext::after {
+    content: "";
+    position: absolute;
+    top: 21%;
+    left: -4%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  transparent #c48d05 transparent transparent;
+}
+
+.tipright:hover .tiprighttext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+.tipleft {
+    position: relative;
+}
+
+.tipleft .tiplefttext {
+    visibility: hidden;
+    background-color: #c48d05;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    left: -180%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tipleft .tiplefttext::after {
+    content: "";
+    position: absolute;
+    top: 21%;
+    left: 101.5%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  transparent  transparent transparent #c48d05;
+}
+
+.tipleft:hover .tiplefttext {
+    visibility: visible;
+    opacity: 1;
+}
